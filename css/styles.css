@@ -19,7 +19,7 @@
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #16161d;
-  --secondary: #3f0050;
+  --secondary: #3A4F41;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -1808,8 +1808,8 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #3f0050;
-  border-color: #3f0050; }
+  background-color: #3A4F41;
+  border-color: #3A4F41; }
   .btn-secondary:hover {
     color: #fff;
     background-color: #21002a;
@@ -1821,8 +1821,8 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0.2rem rgba(92, 38, 106, 0.5); }
   .btn-secondary.disabled, .btn-secondary:disabled {
     color: #fff;
-    background-color: #3f0050;
-    border-color: #3f0050; }
+    background-color: #3A4F41;
+    border-color: #3A4F41; }
   .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
     color: #fff;
     background-color: #17001d;
@@ -1994,21 +1994,21 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(22, 22, 29, 0.5); }
 
 .btn-outline-secondary {
-  color: #3f0050;
-  border-color: #3f0050; }
+  color: #3A4F41;
+  border-color: #3A4F41; }
   .btn-outline-secondary:hover {
     color: #fff;
-    background-color: #3f0050;
-    border-color: #3f0050; }
+    background-color: #3A4F41;
+    border-color: #3A4F41; }
   .btn-outline-secondary:focus, .btn-outline-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(63, 0, 80, 0.5); }
   .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-    color: #3f0050;
+    color: #3A4F41;
     background-color: transparent; }
   .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #3f0050;
-    border-color: #3f0050; }
+    background-color: #3A4F41;
+    border-color: #3A4F41; }
     .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(63, 0, 80, 0.5); }
 
@@ -3620,7 +3620,7 @@ input[type="button"].btn-block {
 
 .badge-secondary {
   color: #fff;
-  background-color: #3f0050; }
+  background-color: #3A4F41; }
   a.badge-secondary:hover, a.badge-secondary:focus {
     color: #fff;
     background-color: #17001d; }
@@ -4710,7 +4710,7 @@ button.bg-primary:focus {
   background-color: black !important; }
 
 .bg-secondary {
-  background-color: #3f0050 !important; }
+  background-color: #3A4F41 !important; }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
@@ -4805,7 +4805,7 @@ button.bg-dark:focus {
   border-color: #16161d !important; }
 
 .border-secondary {
-  border-color: #3f0050 !important; }
+  border-color: #3A4F41 !important; }
 
 .border-success {
   border-color: #28a745 !important; }
@@ -7035,7 +7035,7 @@ a.text-primary:hover, a.text-primary:focus {
   color: black !important; }
 
 .text-secondary {
-  color: #3f0050 !important; }
+  color: #3A4F41 !important; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #030004 !important; }
@@ -7190,15 +7190,15 @@ h3 {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
-    background-color: #3f0050;
+    background-color: #3A4F41;
     border-radius: 1rem;
-    border-color: #3f0050 !important; }
+    border-color: #3A4F41 !important; }
     .divider-custom .divider-custom-line:first-child {
       margin-right: 1rem; }
     .divider-custom .divider-custom-line:last-child {
       margin-left: 1rem; }
   .divider-custom .divider-custom-icon {
-    color: #3f0050 !important;
+    color: #3A4F41 !important;
     font-size: 2rem; }
   .divider-custom.divider-light .divider-custom-line {
     background-color: #fff; }
@@ -7376,7 +7376,7 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #3f0050;
+  background-color: #3A4F41;
   color: #fff; }
 
 .copyright {
