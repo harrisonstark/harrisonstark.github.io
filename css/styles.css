@@ -487,6 +487,11 @@ pre {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px; } }
 
+@media (min-width: 992px)
+#mainNav .navbar-brand.active .profilepicture1, #mainNav .navbar-brand:active .profilepicture1, #mainNav .navbar-brand:focus .profilepicture1, #mainNav .navbar-brand:hover .profilepicture1 {
+    border-color: rgba(255,255,255,.6);
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
