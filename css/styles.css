@@ -33,35 +33,46 @@ body, ul {
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* profile image in the navbar */
 .profile-image {
-    display: inline-block;
+    display: flex;
     border-radius: 50%;
     overflow: hidden;
     width: 100px;
     height: 100px;
+    margin-right: 12px;
 }
 .profile-img {
     width: 100%;
     height: auto;
 }
 .profile-link {
-    display: block;
+    border-radius: 50%;
     text-decoration: none;
     overflow: hidden;
 }
 
 /* nav links in the navbar */
 .nav-links {
+    display: flex;
+    align-items: center;
     font-family: 'HiraginoMinchoProN', serif;
-    font-weight: 600;
+    font-weight: 300;
     color: #ffffff;
+    margin: auto;
 }
 .nav-link {
     text-decoration: none;
     transition: opacity 0.5s;
     cursor: pointer;
+    margin-left: 24px;
+    font-size: 32px;
 }
 .nav-link:hover {
     opacity: 0.8;
@@ -70,52 +81,34 @@ body, ul {
     color: #ffffff;
 }
 
-/* Apply font-family and specific weights to different headings */
-h1 {
-    font-family: 'HiraginoMinchoProN', serif;
-    font-weight: 600;
-}
-
-h2 {
+/* words */
+h1, h2, h3, h4, p {
     font-family: 'HiraginoMinchoProN', serif;
     font-weight: 300;
 }
 
-/* Style for the content area */
+/* content area */
 .content {
-    padding-top:120px; /* Height of the fixed navbar */
-    /* Add styles for the content area */
-    /* Adjust padding, margins, etc. */
+    padding-top: 120px;
+    margin-left: 24px;
 }
 
-/* Style for the about section */
+/* about section */
 .masthead {
-    /* Add styles for the about section */
+
 }
 
-/* Style for the education section */
+/* education section */
 .page-section.portfolio {
-    /* Add styles for the education section */
+
 }
 
-/* Style for the awards section */
+/* awards section */
 #awards {
-    /* Add styles for the awards section */
+
 }
 
-/* Style for the footer */
+/* footer section */
 .footer {
-    /* Add styles for the footer */
+
 }
-
-/* Add more specific styles for individual sections as needed */
-/* For example, targeting specific classes or IDs within sections */
-/* .section-heading {
-    /* Add styles for section headings */
-/* } */
-
-/* .section-content {
-    /* Add styles for section content */
-/* } */
-
-/* Add more specific styles as required for different elements */
