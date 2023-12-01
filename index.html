@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Harrison Stark's Website</title>
-    </head>
-    <body>
-        <nav id="mainNav" class="navbar">
-            <div class="container">
-                <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ" target="_blank" class="profile-link">
-                    <img src="files/pfp.jpg" width="100" class="profile-img" alt="">
-                </a>
-                <div class="menu-links">
-                    <ul class="nav-links">
-                        <li><a href="/files/Resume.pdf" class="nav-link">RESUME</a></li>
-                        <li><a href="#about" class="nav-link">ABOUT</a></li>
-                        <li><a href="#education" class="nav-link">EDUCATION</a></li>
-                        <li><a href="#awards" class="nav-link">AWARDS</a></li>
-                        <li><a href="#contact" class="nav-link">CONTACT</a></li>
-                    </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Harrison Stark's Website</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to styles.css -->
+</head>
+<body>
+    <nav id="mainNav" class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="profile-image">
+                    <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ" target="_blank" class="profile-link">
+                      <div class="outline"></div>
+                      <div class="ball"></div>
+                      <img src="files/pfp.jpg" width="100" class="profile-img" alt="Profile Picture">
+                    </a>
+                  </div>
+                <div class="nav-links">
+                        <a href="/files/Resume.pdf" class="nav-link">Resume</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#education" class="nav-link">Education</a>
+                        <a href="#awards" class="nav-link">Awards</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="content">
         <header id="about" class="masthead">
             <div class="container d-flex align-items-center flex-column">
                 <img src="x.svg" class="avatar-img" alt="">
@@ -32,7 +38,7 @@
         <section id="education" class="page-section portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading">EDUCATION</h2>
+                    <h2 class="section-heading">Education</h2>
                 </div>
                 <div class="row education-details">
                     <div class="d-flex flex-column align-items-center">
@@ -44,7 +50,7 @@
         <section id="awards" class="page-section">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading">AWARDS</h2>
+                    <h2 class="section-heading">Awards</h2>
                 </div>
                 <div class="row award-details">
                     <div class="col-lg-4 ml-auto">
@@ -57,7 +63,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-4">
-                        <h4 class="footer-heading">CONTACT</h4>
+                        <h4 class="footer-heading">Contact</h4>
                         <div class="contact-info">
                             <p class="section-content">TODO</p>
                         </div>
@@ -65,5 +71,6 @@
                 </div>
             </div>
         </footer>
-    </body>
+    </div>
+</body>
 </html>
