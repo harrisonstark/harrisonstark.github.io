@@ -75,7 +75,7 @@ body, ul {
     font-size: 32px;
 }
 .nav-link:hover {
-    opacity: 0.8;
+    opacity: 0.75;
 }
 .nav-link:link, .nav-link:visited, .nav-link:active {
     color: #ffffff;
