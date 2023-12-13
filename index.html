@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Harrison Stark's Website</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to styles.css -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <nav id="mainNav" class="navbar">
@@ -16,10 +16,11 @@
                     </a>
                 </div>
                 <div class="nav-links">
-                    <a href="/files/Harrison_Stark_Resume.pdf" class="nav-link">Resume</a>
+                    <a href="/files/Harrison_Stark_Resume.pdf" class="nav-link" target="_blank" rel="noreferrer noopener">Resume</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#education" class="nav-link">Education</a>
-                    <a href="#awards" class="nav-link">Awards</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
             </div>
@@ -30,7 +31,11 @@
             <div class="container d-flex align-items-center flex-column">
                 <img src="x.svg" class="avatar-img" alt="">
                 <h1 class="masthead-heading">Harrison Stark</h1>
-                <p class="masthead-subheading">TODO</p>
+                <div class="row masthead-details">
+                    <div class="d-flex flex-column align-items-center">
+                        <p class="masthead-subheading">TODO</p>
+                    </div>
+                </div>
             </div>
         </header>
         <section id="education" class="page-section portfolio">
@@ -40,17 +45,45 @@
                 </div>
                 <div class="row education-details">
                     <div class="d-flex flex-column align-items-center">
-                        <p class="section-content">TODO</p>
+                        <p class="section-content">Bachelor of Science in Computer Science - 3.76 GPA - University of Florida, Gainesville, FL</p>
+                        <p class="section-content">Associate of Arts - 4.0 GPA - Palm Beach State University, Palm Beach Gardens, FL</p>
+                        <p class="section-content">High School Diploma - 3.94 GPA - Suncoast Community High School, Riviera Beach, FL</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="awards" class="page-section">
+        <section id="experience" class="page-section">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading">Awards</h2>
+                    <h2 class="section-heading">Experience</h2>
                 </div>
-                <div class="row award-details">
+                <div class="row experience-details">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="section-content">Qualtrics - Software Engineer (October 2023 - Current)</p>
+                        <ul>
+                            <li>Took the Quack-end Developer project to production, completing a launch readiness checklist for general access
+                                to be used internally by all employees.</li>
+                            <li>Updated high volume automations from Python 2 to Python 3 to proactively improve security posture, and
+                                created and improved upon unit and integration tests alongside documentation for ease of future development.</li>
+                        </ul>
+                        <p class="section-content">Qualtrics - Software Engineer Intern (June 2023 - August 2023)</p>
+                        <ul>
+                            <li>Designed and developed the Gradebook Passback feature for the Qualtrics LTI 1.3 integration using Node.js
+                                allowing users to effortlessly sync grade data from Qualtrics surveys.</li>
+                            <li>Tested, reviewed, and executed the complete launch readiness checklist for the early access phase, surpassing
+                                the original scope.</li>
+                            <li>Proposed and implemented a further permissions feature with an estimated 50% increase in potential customers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="page-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading">Projects</h2>
+                </div>
+                <div class="row project-details">
                     <div class="col-lg-4 ml-auto">
                         <p class="section-content">TODO</p>
                     </div>
@@ -61,14 +94,15 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-4">
-                        <h4 class="footer-heading">Contact</h4>
+                        <h2 class="footer-heading">Contact</h2>
                         <div class="contact-info">
-                            <p class="section-content">TODO</p>
+                            <p class="section-content">LinkedIn — Phone Number — Email — GitHub</p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>

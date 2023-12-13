@@ -61,6 +61,7 @@ body, ul {
 /* nav links in the navbar */
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     font-family: 'HiraginoMinchoProN', serif;
     font-weight: 300;
@@ -81,10 +82,44 @@ body, ul {
     color: #ffffff;
 }
 
+@media (max-width: 959px) {
+    .navbar {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+  
+    .profile-image {
+      width: 60px; /* Reduce profile image size */
+      height: 60px;
+      margin-right: 8px; /* Adjust margin for smaller screens */
+    }
+  
+    .nav-links {
+      display: block; /* Hide nav links initially on smaller screens */
+      flex-direction: column; /* Align links vertically in a column */
+      text-align: center; /* Center align the links */
+      margin-top: 10px; /* Add space between profile image and links */
+      font-size: 24px; /* Adjust font size for smaller screens */
+    }
+  
+    .nav-links.open {
+      display: flex; /* Show links when the mobile menu is open */
+    }
+  
+    .nav-link {
+      margin: 8px 0; /* Adjust margin for smaller screens */
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+}
+
 /* words */
 h1, h2, h3, h4, p {
     font-family: 'HiraginoMinchoProN', serif;
     font-weight: 300;
+}
+
+/* unordered list tabbing */
+ul {
+    padding-left:40px
 }
 
 /* content area */
@@ -93,22 +128,16 @@ h1, h2, h3, h4, p {
     margin-left: 24px;
 }
 
-/* about section */
-.masthead {
-
+/* headings */
+.masthead-heading {
+    margin-block: 0em .5em;
 }
 
-/* education section */
-.page-section.portfolio {
-
+.section-heading, .footer-heading {
+    margin-block: 1.5em .5em;
 }
 
-/* awards section */
-#awards {
-
-}
-
-/* footer section */
-.footer {
+/* sections */
+#about, #education, #experience, #projects, #contact {
 
 }
