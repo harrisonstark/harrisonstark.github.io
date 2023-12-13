@@ -119,6 +119,8 @@ h1, h2, h3, h4, p {
 
 /* unordered list tabbing */
 ul {
+    font-family: 'HiraginoMinchoProN', serif;
+    font-weight: 300;
     padding-left:40px
 }
 
