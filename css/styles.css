@@ -13,45 +13,58 @@
     font-style: normal;
 }
 
-/* default margin and padding */
-body, ul {
+body {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 /* fixed navigation bar */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+    transition: transform 0.5s;
     background-color: #16161d;
-    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+    z-index: 1000;
+    /* Ensure the navbar stays on top of other elements */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.navbar.raise {
+    transform: translateY(-100%); /* raise and lower navbar on click */
+}
+
 .navbar-content {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
+    padding-right: 20px;
+    transition: transform 0.5s;
 }
 
 /* profile image in the navbar */
 .profile-image {
-    display: flex;
     border-radius: 50%;
     overflow: hidden;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     margin-right: 12px;
 }
+
 .profile-img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
+
 .profile-link {
     border-radius: 50%;
     text-decoration: none;
@@ -61,76 +74,129 @@ body, ul {
 /* nav links in the navbar */
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     font-family: 'HiraginoMinchoProN', serif;
     font-weight: 300;
     color: #ffffff;
     margin: auto;
 }
+
 .nav-link {
     text-decoration: none;
     transition: opacity 0.5s;
     cursor: pointer;
     margin-left: 24px;
-    font-size: 32px;
+    font-size: 36px;
 }
+
 .nav-link:hover {
     opacity: 0.75;
 }
-.nav-link:link, .nav-link:visited, .nav-link:active {
+
+.nav-link:link,
+.nav-link:visited,
+.nav-link:active {
     color: #ffffff;
 }
 
-@media (max-width: 959px) {
+.navbar-toggle {
+    position: absolute;
+    top: 145px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff00ff;
+    font-size: 20px;
+}
+
+@media (max-width: 1090px) {
     .navbar {
-      padding: 8px 16px; /* Adjust padding for smaller screens */
+        padding: 8px 16px;
+        /* Adjust padding for smaller screens */
     }
-  
+
     .profile-image {
-      width: 60px; /* Reduce profile image size */
-      height: 60px;
-      margin-right: 8px; /* Adjust margin for smaller screens */
+        width: 100px;
+        /* Reduce profile image size */
+        height: 100px;
+        margin-right: 12px;
+        /* Adjust margin for smaller screens */
     }
-  
-    .nav-links {
-      display: block; /* Hide nav links initially on smaller screens */
-      flex-direction: column; /* Align links vertically in a column */
-      text-align: center; /* Center align the links */
-      margin-top: 10px; /* Add space between profile image and links */
-      font-size: 24px; /* Adjust font size for smaller screens */
-    }
-  
-    .nav-links.open {
-      display: flex; /* Show links when the mobile menu is open */
-    }
-  
+
     .nav-link {
-      margin: 8px 0; /* Adjust margin for smaller screens */
-      font-size: 20px; /* Adjust font size for smaller screens */
+        margin: 8px;
+        /* Adjust margin for smaller screens */
+        font-size: 32px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        top: 115px;
+        right: 50px;
+        background-color: #ffffff;
+        font-size: 20px;
+    }
+
+    .content.raise {
+        transform: translateY(-120px); /* move content up when navbar clicks (height set in js) */
     }
 }
 
 /* words */
-h1, h2, h3, h4, p {
-    font-family: 'HiraginoMinchoProN', serif;
-    font-weight: 300;
-}
-
-/* unordered list tabbing */
-ul {
-    padding-left:40px;
-}
-
+h1,
+h2,
+h3,
+h4,
+p,
 li {
     font-family: 'HiraginoMinchoProN', serif;
     font-weight: 300;
 }
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 22px;
+}
+
+/* unordered list tabbing */
+ul {
+    padding-left: 40px;
+}
+
+li {
+    font-size: 20px;
+}
+
 /* content area */
 .content {
-    padding-top: 120px;
+    flex: 1;
     margin-left: 24px;
+    transition: transform 0.5s;
+}
+
+.content.raise {
+    transform: translateY(-150px); /* move content up when navbar clicks (height set in js) */
 }
 
 /* headings */
@@ -138,11 +204,14 @@ li {
     margin-block: 0em .5em;
 }
 
-.section-heading, .footer-heading {
+.section-heading,
+.footer-heading {
     margin-block: 1.5em .5em;
 }
 
 /* sections */
-#about, #education, #experience, #projects, #contact {
-
-}
+#about,
+#education,
+#experience,
+#projects,
+#contact {}
