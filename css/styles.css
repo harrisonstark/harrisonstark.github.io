@@ -1,14 +1,14 @@
 /* fonts */
 @font-face {
     font-family: 'HiraginoMinchoProN';
-    src: url('/files/HiraginoMinchoProNW3.otf') format('opentype');
+    src: url('fonts/HiraginoMinchoProNW3.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'HiraginoMinchoProN';
-    src: url('/files/HiraginoMinchoProNW6.otf') format('opentype');
+    src: url('fonts/HiraginoMinchoProNW6.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
@@ -23,7 +23,7 @@ body {
 
 /* fixed navigation bar */
 .navbar {
-    position: sticky;
+    position: sticky; /* TODO, fix the positioning when scrolling to bottom of page (ensure it stays on the screen) */
     top: 0;
     left: 0;
     width: 100%;
@@ -55,8 +55,8 @@ body {
 .profile-image {
     border-radius: 50%;
     overflow: hidden;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     margin-right: 12px;
 }
 
@@ -102,46 +102,12 @@ body {
 
 .navbar-toggle {
     position: absolute;
-    top: 145px;
+    top: 120px;
     right: 40px;
     width: 20px;
     height: 20px;
     background-color: #ff00ff;
     font-size: 20px;
-}
-
-@media (max-width: 1090px) {
-    .navbar {
-        padding: 8px 16px;
-        /* Adjust padding for smaller screens */
-    }
-
-    .profile-image {
-        width: 100px;
-        /* Reduce profile image size */
-        height: 100px;
-        margin-right: 12px;
-        /* Adjust margin for smaller screens */
-    }
-
-    .nav-link {
-        margin: 8px;
-        /* Adjust margin for smaller screens */
-        font-size: 32px;
-        /* Adjust font size for smaller screens */
-    }
-
-    .navbar-toggle {
-        position: absolute;
-        top: 115px;
-        right: 50px;
-        background-color: #ffffff;
-        font-size: 20px;
-    }
-
-    .content.raise {
-        transform: translateY(-120px); /* move content up when navbar clicks (height set in js) */
-    }
 }
 
 /* words */
@@ -196,7 +162,7 @@ li {
 }
 
 .content.raise {
-    transform: translateY(-150px); /* move content up when navbar clicks (height set in js) */
+    transform: translateY(-125px); /* move content up when navbar clicks (height set in js) */
 }
 
 /* headings */
@@ -215,3 +181,29 @@ li {
 #experience,
 #projects,
 #contact {}
+
+.right-align-text {
+    float: right;
+    padding-right: 20px;
+}
+
+@media (max-width: 980px) {
+
+    .profile-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav-link {
+        margin: 8px;
+        font-size: 24px;
+    }
+
+    .navbar-toggle {
+        top: 80px;
+    }
+
+    .content.raise {
+        transform: translateY(-80px); /* move content up when navbar clicks (height set in js) */
+    }
+}
