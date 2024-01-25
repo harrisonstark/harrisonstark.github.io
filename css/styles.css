@@ -14,36 +14,30 @@
 }
 
 html {
-    scroll-padding-top: 120px; /* height of sticky header */
+    scroll-padding-top: 120px; /* height of header */
 }
 
 body {
     margin: 0;
     padding: 0;
+    transition: transform 0.5s;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 /* fixed navigation bar */
 .navbar {
-    position: sticky; /* TODO, fix the positioning when scrolling to bottom of page (ensure it stays on the screen) */
-    top: 0;
-    left: 0;
+    position: fixed;
     width: 100%;
-    transition: transform 0.5s;
     background-color: #16161d;
-    z-index: 1000;
-    /* Ensure the navbar stays on top of other elements */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-.navbar.raise {
-    transform: translateY(-100%); /* raise and lower navbar on click */
+body.raise {
+    transform: translateY(-120px); /* raise and lower body on click */
 }
 
 .navbar-content {
@@ -162,12 +156,8 @@ li {
 /* content area */
 .content {
     flex: 1;
+    margin-top: 120px;
     margin-left: 24px;
-    transition: transform 0.5s;
-}
-
-.content.raise {
-    transform: translateY(-125px); /* move content up when navbar clicks (height set in js) */
 }
 
 /* headings */
@@ -196,10 +186,10 @@ li {
     padding-right: 20px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1160px) {
 
     html {
-        scroll-padding-top: 80px; /* height of sticky header */
+        scroll-padding-top: 80px; /* height of header */
     }
 
     .profile-image {
@@ -215,8 +205,11 @@ li {
     .navbar-toggle {
         top: 80px;
     }
+    .content {
+        margin-top: 80px;
+    }
 
-    .content.raise {
-        transform: translateY(-80px); /* move content up when navbar clicks (height set in js) */
+    body.raise {
+        transform: translateY(-80px); /* move body up when navbar clicks */
     }
 }
