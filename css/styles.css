@@ -152,6 +152,7 @@ ul {
 
 li {
     font-size: 20px;
+    padding-right: 20px;
 }
 
 /* content area */
@@ -168,6 +169,10 @@ li {
 /* headings */
 .masthead-heading {
     margin-block: 0em .5em;
+}
+
+.masthead-subheading {
+    padding-right: 20px;
 }
 
 .section-heading,
