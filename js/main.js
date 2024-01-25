@@ -7,8 +7,10 @@ window.onbeforeunload = function () {
 // nav button
 
 const toggleBtn = document.querySelector('.navbar-toggle');
-const body = document.querySelector('body');
+const navbar = document.querySelector('.navbar');
+const content = document.querySelector('.content');
 
 toggleBtn.addEventListener('click', () => {
-  body.classList.toggle('raise');
+  navbar.classList.toggle('raise');
+  content.classList.toggle('raise');
 });

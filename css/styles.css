@@ -20,10 +20,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-    transition: transform 0.5s;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
 }
 
 /* fixed navigation bar */
@@ -32,12 +31,14 @@ body {
     width: 100%;
     background-color: #16161d;
     display: flex;
+    z-index: 1000;
     padding: 10px 20px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s;
 }
 
-body.raise {
-    transform: translateY(-120px); /* raise and lower body on click */
+.navbar.raise {
+    transform: translateY(-120px); /* raise and lower navbar on click */
 }
 
 .navbar-content {
@@ -158,6 +159,11 @@ li {
     flex: 1;
     margin-top: 120px;
     margin-left: 24px;
+    transition: transform 0.5s;
+}
+
+.content.raise {
+    transform: translateY(-120px); /* move content up when navbar clicks (height set in js) */
 }
 
 /* headings */
@@ -192,6 +198,10 @@ li {
         scroll-padding-top: 100px; /* height of header + 20px */
     }
 
+    .navbar.raise {
+        transform: translateY(-80px); /* move content up when navbar clicks (height set in js) */
+    }
+
     .profile-image {
         width: 60px;
         height: 60px;
@@ -209,7 +219,7 @@ li {
         margin-top: 80px;
     }
 
-    body.raise {
-        transform: translateY(-80px); /* move body up when navbar clicks */
+    .content.raise {
+        transform: translateY(-80px); /* move content up when navbar clicks (height set in js) */
     }
 }
