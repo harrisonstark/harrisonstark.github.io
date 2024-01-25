@@ -14,7 +14,7 @@
 }
 
 html {
-    scroll-padding-top: 120px; /* height of header */
+    scroll-padding-top: 140px; /* height of header + 20px */
 }
 
 body {
@@ -189,7 +189,7 @@ li {
 @media (max-width: 1160px) {
 
     html {
-        scroll-padding-top: 80px; /* height of header */
+        scroll-padding-top: 100px; /* height of header + 20px */
     }
 
     .profile-image {
