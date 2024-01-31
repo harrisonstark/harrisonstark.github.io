@@ -101,12 +101,24 @@ body {
 
 .navbar-toggle {
     position: absolute;
-    top: 120px;
+    top: 124px;
     right: 40px;
-    width: 20px;
-    height: 20px;
-    background-color: #ff00ff;
-    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    padding: 0px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.navbar-toggle-img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.5s ease;
+}
+
+.navbar-toggle-img.flip {
+    transform: rotate(180deg);
 }
 
 /* words */
@@ -151,14 +163,14 @@ ul {
 
 li {
     font-size: 20px;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 /* content area */
 .content {
     flex: 1;
-    margin-top: 120px;
-    margin-left: 24px;
+    margin-top: 140px;
+    margin-left: 28px;
     transition: transform 0.5s;
 }
 
@@ -172,7 +184,7 @@ li {
 }
 
 .masthead-subheading {
-    padding-right: 20px;
+    padding-right: 32px;
 }
 
 .section-heading,
@@ -189,13 +201,13 @@ li {
 
 .right-align-text {
     float: right;
-    padding-right: 20px;
+    padding-right: 36px;
 }
 
 @media (max-width: 1160px) {
 
     html {
-        scroll-padding-top: 100px; /* height of header + 20px */
+        scroll-padding-top: 120px; /* height of header + 20px */
     }
 
     .navbar.raise {
@@ -216,7 +228,7 @@ li {
         top: 80px;
     }
     .content {
-        margin-top: 80px;
+        margin-top: 100px;
     }
 
     .content.raise {
