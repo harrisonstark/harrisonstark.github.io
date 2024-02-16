@@ -15,6 +15,7 @@
 
 html {
     scroll-padding-top: 140px; /* height of header + 20px */
+    scroll-behavior:smooth;
 }
 
 body {
