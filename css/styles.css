@@ -53,11 +53,12 @@ body {
 
 /* profile image in the navbar */
 .profile-image {
+    border-radius: 50%;
     overflow: hidden;
     width: 100px;
     height: 100px;
     margin-right: 4px;
-    border: 4px solid #fff;
+    border: 3px solid #fff;
 }
 
 .profile-img {
