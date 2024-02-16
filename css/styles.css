@@ -14,7 +14,7 @@
 }
 
 html {
-    scroll-padding-top: 140px; /* height of header + 20px */
+    scroll-padding-top: 150px; /* height of header + 20px */
     scroll-behavior:smooth;
 }
 
@@ -33,13 +33,13 @@ body {
     background-color: #16161d;
     display: flex;
     z-index: 1000;
-    padding: 10px 20px;
+    padding: 12px 20px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     transition: transform 0.5s;
 }
 
 .navbar.raise {
-    transform: translateY(-120px); /* raise and lower navbar on click */
+    transform: translateY(-130px); /* raise and lower navbar on click */
 }
 
 .navbar-content {
@@ -57,7 +57,6 @@ body {
     overflow: hidden;
     width: 100px;
     height: 100px;
-    margin-right: 4px;
     border: 3px solid #fff;
 }
 
@@ -103,7 +102,7 @@ body {
 
 .navbar-toggle {
     position: absolute;
-    top: 124px;
+    top: 132px;
     right: 40px;
     width: 36px;
     height: 36px;
@@ -171,13 +170,13 @@ li {
 /* content area */
 .content {
     flex: 1;
-    margin-top: 140px;
+    margin-top: 150px;
     margin-left: 28px;
     transition: transform 0.5s;
 }
 
 .content.raise {
-    transform: translateY(-120px); /* move content up when navbar clicks (height set in js) */
+    transform: translateY(-130px); /* move content up when navbar clicks (height set in js) */
 }
 
 /* headings */
@@ -209,16 +208,17 @@ li {
 @media (max-width: 1160px) {
 
     html {
-        scroll-padding-top: 120px; /* height of header + 20px */
+        scroll-padding-top: 130px; /* height of header + 20px */
     }
 
     .navbar.raise {
-        transform: translateY(-80px); /* move content up when navbar clicks (height set in js) */
+        transform: translateY(-90px); /* move content up when navbar clicks (height set in js) */
     }
 
     .profile-image {
         width: 60px;
         height: 60px;
+        margin-right: 4px;
     }
 
     .nav-link {
@@ -227,13 +227,13 @@ li {
     }
 
     .navbar-toggle {
-        top: 80px;
+        top: 90px;
     }
     .content {
-        margin-top: 100px;
+        margin-top: 110px;
     }
 
     .content.raise {
-        transform: translateY(-80px); /* move content up when navbar clicks (height set in js) */
+        transform: translateY(-90px); /* move content up when navbar clicks (height set in js) */
     }
 }
