@@ -196,6 +196,11 @@ li {
 .footer-img {
     width: 76px;
     height: 76px;
+    transition: opacity 1s;
+}
+
+.footer-img:hover {
+    opacity: 0.85;
 }
 
 /* sections */
