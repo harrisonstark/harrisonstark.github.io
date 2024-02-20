@@ -193,6 +193,11 @@ li {
     margin-block: 1.5em .5em;
 }
 
+.footer-img {
+    width: 76px;
+    height: 76px;
+}
+
 /* sections */
 #about,
 #education,
