@@ -1,14 +1,14 @@
 /* fonts */
 @font-face {
     font-family: 'HiraginoMinchoProN';
-    src: url('fonts/HiraginoMinchoProNW3.otf') format('opentype');
+    src: url('../files/fonts/HiraginoMinchoProNW3.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'HiraginoMinchoProN';
-    src: url('fonts/HiraginoMinchoProNW6.otf') format('opentype');
+    src: url('../files/fonts/HiraginoMinchoProNW6.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
@@ -219,6 +219,10 @@ li {
         width: 60px;
         height: 60px;
         margin-right: 4px;
+    }
+
+    .profile-img {
+        height: 30%;
     }
 
     .nav-link {
