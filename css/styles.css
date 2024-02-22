@@ -188,6 +188,10 @@ li {
     padding-right: 32px;
 }
 
+.project-link:visited {
+    color: blue;
+}
+
 .section-heading,
 .footer-heading {
     margin-block: 1.5em .5em;
