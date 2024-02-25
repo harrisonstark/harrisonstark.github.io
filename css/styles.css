@@ -235,8 +235,9 @@ li {
         margin-right: 4px;
     }
 
-    .profile-img {
-        height: 30%;
+    .profile-image {
+        height: 75px;
+        width: 75px;
     }
 
     .nav-link {
