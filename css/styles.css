@@ -51,7 +51,7 @@ body {
     transition: transform 0.5s;
 }
 
-/* profile image in the navbar */
+/* profile and home images in the navbar */
 .profile-image {
     border-radius: 50%;
     overflow: hidden;
@@ -60,12 +60,29 @@ body {
     border: 3px solid #fff;
 }
 
+.home-image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+}
+
 .profile-img {
     width: 100%;
     height: 100%;
 }
 
-.profile-link {
+.home-img {
+    width: 85px;
+    height: 85px;
+    padding-top: 4px;
+}
+
+.profile-link, .home-link {
     border-radius: 50%;
     text-decoration: none;
     overflow: hidden;
@@ -229,15 +246,15 @@ li {
         transform: translateY(-90px); /* move content up when navbar clicks (height set in js) */
     }
 
-    .profile-image {
-        width: 60px;
-        height: 60px;
+    .profile-image, .home-image {
+        height: 75px;
+        width: 75px;
         margin-right: 4px;
     }
 
-    .profile-image {
-        height: 75px;
-        width: 75px;
+    .home-img {
+        height: 65px;
+        width: 65px;
     }
 
     .nav-link {
