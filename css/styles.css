@@ -99,6 +99,11 @@ body {
     margin: auto;
 }
 
+.nav-link-chunk {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .nav-link {
     text-decoration: none;
     transition: opacity 0.5s;
@@ -236,10 +241,10 @@ li {
     padding-right: 36px;
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
 
     html {
-        scroll-padding-top: 130px; /* height of header + 20px */
+        scroll-padding-top: 110px; /* height of header + 20px */
     }
 
     .navbar.raise {
@@ -247,19 +252,33 @@ li {
     }
 
     .profile-image, .home-image {
-        height: 75px;
-        width: 75px;
+        min-width: 60px;
+        height: 60px;
+        width: 60px;
         margin-right: 4px;
     }
 
     .home-img {
-        height: 65px;
-        width: 65px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 16px;
+    }
+
+    .nav-link-chunk {
+        width: 100%;
     }
 
     .nav-link {
-        margin: 8px;
-        font-size: 24px;
+        margin: 4px 20px;
+        font-size: 16px;
+        margin-left: 0; /* Remove left margin on small screens */
+        width: 24%;
     }
 
     .navbar-toggle {
@@ -271,5 +290,44 @@ li {
 
     .content.raise {
         transform: translateY(-90px); /* move content up when navbar clicks (height set in js) */
+    }
+
+    .footer-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* unordered list tabbing */
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        padding-right: 20px;
     }
 }
