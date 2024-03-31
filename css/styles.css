@@ -197,7 +197,12 @@ li {
 #education,
 #experience,
 #projects,
-#contact {}
+#contact {
+    .contact-info a {
+        margin-right: 35px;
+        text-decoration: none;
+    }
+}
 
 .right-align-text {
     float: right;
