@@ -17,6 +17,8 @@ toggleBtn.addEventListener('click', () => {
   toggleBtnImg.classList.toggle('flip');
 });
 
+// profile button
+
 const cmmLink = "https://www.youtube.com/watch?v=fWNaR-rxAic"
 const cwLink = "https://www.youtube.com/watch?v=izGwDsrQ1eQ"
 
