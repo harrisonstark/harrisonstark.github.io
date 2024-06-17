@@ -16,3 +16,10 @@ toggleBtn.addEventListener('click', () => {
   content.classList.toggle('raise');
   toggleBtnImg.classList.toggle('flip');
 });
+
+const cmmLink = "https://www.youtube.com/watch?v=fWNaR-rxAic"
+const cwLink = "https://www.youtube.com/watch?v=izGwDsrQ1eQ"
+
+function cmmcw() {
+  document.querySelector('.profile-link').setAttribute("href", (Date.now() % 2 == 0 ? cmmLink : cwLink));
+}
