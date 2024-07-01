@@ -22,6 +22,7 @@ toggleBtn.addEventListener('click', () => {
 const cmmLink = "https://www.youtube.com/watch?v=fWNaR-rxAic"
 const cwLink = "https://www.youtube.com/watch?v=izGwDsrQ1eQ"
 
+// cmmcw = call me maybe / careless whisper
 function cmmcw() {
   document.querySelector('.profile-link').setAttribute("href", (Date.now() % 2 == 0 ? cmmLink : cwLink));
 }
