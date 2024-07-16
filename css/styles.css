@@ -4,6 +4,7 @@
     src: url('../files/fonts/HiraginoMinchoProNW3.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -11,6 +12,7 @@
     src: url('../files/fonts/HiraginoMinchoProNW6.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 html {
