@@ -221,6 +221,10 @@ li {
     margin-block: 1.5em .5em;
 }
 
+.section-paragraph-hobbies {
+    text-indent: 48px;
+}
+
 .footer-img {
     width: 76px;
     height: 76px;
