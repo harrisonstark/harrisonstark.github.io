@@ -234,13 +234,6 @@ li {
     opacity: 0.85;
 }
 
-/* sections */
-#about,
-#education,
-#experience,
-#projects,
-#contact {}
-
 .right-align-text {
     float: right;
     padding-right: 8px;
