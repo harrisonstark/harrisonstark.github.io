@@ -194,8 +194,7 @@ li {
 /* content area */
 .content {
     flex: 1;
-    margin-top: 150px;
-    margin-left: 28px;
+    margin: 150px 28px;
     transition: transform 0.5s;
 }
 
@@ -244,7 +243,7 @@ li {
 
 .right-align-text {
     float: right;
-    padding-right: 36px;
+    padding-right: 8px;
 }
 
 @media (max-width: 1200px) {
