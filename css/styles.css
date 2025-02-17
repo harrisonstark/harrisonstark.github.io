@@ -151,6 +151,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 li {
     font-family: 'HiraginoMinchoProN', serif;
@@ -175,15 +177,17 @@ h4 {
 
 h5 {
     font-size: 24px;
+    margin: 0;
 }
 
 p {
     font-size: 22px;
 }
 
-/* unordered list tabbing */
-ul {
+/* list tabbing */
+ul, ol {
     padding-left: 40px;
+    margin-top: 8px;
 }
 
 li {
