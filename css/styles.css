@@ -111,7 +111,7 @@ body {
     transition: opacity 0.5s;
     cursor: pointer;
     margin-left: 24px;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .nav-link:hover {
@@ -187,7 +187,8 @@ p {
 /* list tabbing */
 ul, ol {
     padding-left: 40px;
-    margin-top: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 li {
@@ -222,6 +223,11 @@ li {
 .section-heading,
 .footer-heading {
     margin-block: 1.5em .5em;
+}
+
+.section-content {
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 .section-paragraph-hobbies {
