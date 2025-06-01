@@ -111,7 +111,7 @@ body {
     transition: opacity 0.5s;
     cursor: pointer;
     margin-left: 24px;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .nav-link:hover {
@@ -160,28 +160,28 @@ li {
 }
 
 h1 {
-    font-size: 40px;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-h3 {
     font-size: 32px;
 }
 
-h4 {
+h2 {
     font-size: 28px;
 }
 
-h5 {
+h3 {
     font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
     margin: 0;
 }
 
 p {
-    font-size: 22px;
+    font-size: 16px;
 }
 
 /* list tabbing */
@@ -191,7 +191,7 @@ ul, ol {
 }
 
 li {
-    font-size: 20px;
+    font-size: 16px;
     padding-right: 30px;
 }
 
