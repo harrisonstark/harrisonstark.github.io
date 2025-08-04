@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Harrison Stark's Blog</title>
+  <title>Blog Post</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/styles.css">
 
+  <!-- Favicons (unchanged) -->
   <link rel="apple-touch-icon" sizes="180x180" href="../files/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../files/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../files/favicons/favicon-16x16.png">
@@ -12,24 +14,21 @@
   <link rel="mask-icon" href="../files/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="../files/favicons/favicon.ico">
   <meta name="theme-color" content="#ffffff">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="../files/favicons/browserconfig.xml">
-  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <div class="container content">
     <header class="masthead">
       <div class="d-flex align-items-center flex-column">
-        <h1 class="masthead-heading">Blog</h1>
-        <a href="../" class="home-link" style="margin-top: 1rem;">← Home</a>
+        <h1 class="masthead-heading" id="post-title">Loading...</h1>
+        <a href="./index.html" class="home-link" style="margin-top: 1rem;">← Back to Blog</a>
       </div>
     </header>
 
-    <section class="blog-list" id="blog-list">
-      <!-- Blog entries will be injected here by JS -->
+    <section class="blog-post" id="post-content">
+      <!-- Content injected here -->
     </section>
   </div>
 
-  <script src="../js/blog.js"></script>
+  <script src="../js/post.js"></script>
 </body>
 </html>
