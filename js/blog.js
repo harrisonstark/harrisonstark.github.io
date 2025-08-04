@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const entry = document.createElement('div');
         entry.className = 'blog-entry';
         entry.innerHTML = `
-          <h2><a href="./posts/${post.slug}.html">${post.title}</a></h2>
-          <p class="blog-date">${new Date(post.date).toLocaleDateString()}</p>
+            <h2><a href="./post.html?post=${post.slug}">${post.title}</a></h2>
+            <p class="blog-date">${post.date}</p>
         `;
         blogList.appendChild(entry);
       }
