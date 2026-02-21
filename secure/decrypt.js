@@ -24,7 +24,8 @@
   const ACCESS_MAP = {
     id5: 1,
     op2: 2,
-    kv9: 3
+    kv9: 3,
+    uq1: 4
   };
 
   window.ACCESS_LIMIT = ACCESS_MAP[accessKey] ?? 1;
