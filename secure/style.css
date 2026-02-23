@@ -1,88 +1,133 @@
-body {
-  background: #d18385;
-  color: #222;
-  font-family: 'Times New Roman', Times, serif;
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
+/* ---------------------- GLOBAL RESET ---------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  background: #ddabae;
+}
+
+body {
+  background: #ddabae;
+  font-family: 'Times New Roman', Times, serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------- PAGE WRAPPER ---------------------- */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* ---------------------- HEADER IMAGES (updated larger) ---------------------- */
 .header-row {
   display: flex;
-  align-items: flex-end;
+  gap: 1rem;
   justify-content: center;
-  gap: 2.2rem;
-  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
+.header-row img,
 .header-side {
-  max-width: 240px;
-  width: 44vw;
-  min-width: 120px;
+  flex: 1 1 auto;
+  max-width: 160px;   /* bigger for desktop */
+  min-width: 48px;
   height: auto;
+  object-fit: contain;
   opacity: 0.92;
 }
-img.header-image {
-  display: block;
-  max-width: 60%;
-  min-width: 180px;
-  height: auto;
-  margin: 0 auto;
+
+/* ---------------------- TEXT ---------------------- */
+#guest-paragraph {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 2em;
 }
+
+/* ---------------------- FORM ---------------------- */
 form {
   background: #fff6f6;
-  border-radius: 10px;
+  border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 1.5rem;
-  margin-top: 1.5rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px; /* limit full width */
+  box-sizing: border-box;
 }
+
+/* ---------------------- JS-CONTROLLED SECTIONS ---------------------- */
+#name-section,
+#guest-names-section,
+#guest-controls,
+#diet-section {
+  display: none;
+}
+
+/* ---------------------- LABELS & INPUTS ---------------------- */
 label {
   display: block;
   margin-top: 1.2rem;
   font-weight: 500;
 }
-input, textarea, button {
+
+input,
+textarea,
+select,
+button {
   font-size: 1rem;
   margin-top: 0.4rem;
   margin-bottom: 0.7rem;
-  padding: 0.5rem 0.7rem;
+  padding: 0.6rem 0.8rem;
   border-radius: 5px;
   border: 2px solid #b96a6c;
   width: 100%;
-  box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  max-width: 100%;
+  font-family: inherit;
 }
+
+textarea {
+  min-height: 2.5em;
+  resize: vertical;
+}
+
+/* ---------------------- SELECT CUSTOMIZATION ---------------------- */
 select {
-  font-size: 1rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.7rem;
-  padding: 0.5rem 0.7rem;
-  border-radius: 5px;
-  border: 2px solid #b96a6c;
-  width: 100%;
-  box-sizing: border-box;
-  background: #fff;
-  color: #222;
+  background: #fff url('data:image/svg+xml;utf8,<svg fill="%23b96a6c" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 8l3 3 3-3"/></svg>') no-repeat right 0.7em center;
+  background-size: 1.2em;
   appearance: none;
-  outline: none;
+  padding-right: 2.2em;
   transition: border 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  position: relative;
-  font-family: 'Times New Roman', Times, serif;
 }
+
 select:focus-visible {
   border: 2.5px solid #222;
   box-shadow: 0 0 0 2px #d18385, 0 2px 8px rgba(0,0,0,0.07);
 }
+
 select:hover {
   border-color: #222;
 }
-/* Custom dropdown arrow */
-select {
-  background-image: url('data:image/svg+xml;utf8,<svg fill="%23b96a6c" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 8l3 3 3-3"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.7em center;
-  background-size: 1.2em;
-  padding-right: 2.2em;
-}
+
+/* ---------------------- BUTTON GROUP ---------------------- */
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -90,8 +135,8 @@ select {
   margin-top: 0.4rem;
   margin-bottom: 0.7rem;
 }
+
 .button-group button {
-  width: auto;
   flex: 1 1 45%;
   min-width: 120px;
   background: #fff;
@@ -99,34 +144,30 @@ select {
   border: 2px solid #b96a6c;
   border-radius: 5px;
   padding: 0.5rem 0.7rem;
-  font-size: 1rem;
+  font-family: inherit;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border 0.2s;
   outline: none;
-  font-family: 'Times New Roman', Times, serif;
 }
+
+.button-group button.selected,
+.button-group button:active {
+  background: #d18385;
+  color: #fff;
+  border-color: #b96a6c;
+}
+
 .button-group button:focus-visible {
   border: 2.5px solid #222;
   box-shadow: 0 0 0 2px #d18385;
 }
-.button-group button.selected, .button-group button:active {
-  background: #d18385;
-  color: #fff;
-  border-color: #b96a6c;
-}
+
 .button-group button.selected:focus-visible {
   border: 2.5px solid #fff;
   box-shadow: 0 0 0 2px #b96a6c;
 }
-.button-group button.selected, .button-group button:active {
-  background: #d18385;
-  color: #fff;
-  border-color: #b96a6c;
-}
-textarea {
-  min-height: 2.5em;
-  resize: vertical;
-}
+
+/* ---------------------- SUBMIT BUTTON ---------------------- */
 button[type="submit"] {
   background: #d18385;
   color: #fff;
@@ -138,34 +179,61 @@ button[type="submit"] {
   outline: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
+
 button[type="submit"]:focus-visible {
   border: 2.5px solid #222;
   box-shadow: 0 0 0 2px #d18385, 0 2px 8px rgba(0,0,0,0.07);
 }
-button[type="submit"]:hover, button[type="submit"]:active {
+
+button[type="submit"]:hover,
+button[type="submit"]:active {
   background: #b96a6c;
   border-color: #222;
 }
-button[type="submit"]:hover {
-  background: #b96a6c;
-}
+
+/* ---------------------- HIDDEN ---------------------- */
 .hidden { display: none; }
-@media (max-width: 600px) {
-  .header-row {
-    gap: 0.7rem;
+
+/* ---------------------- MEDIA QUERIES ---------------------- */
+@media (max-width: 700px) {
+  .page {
+    padding-left: 8px;
+    padding-right: 8px;
   }
-  img.header-image {
-    max-width: 100%;
-    min-width: 100px;
-  }
-  .header-side {
-    max-width: 120px;
-    min-width: 64px;
-  }
-  body {
-    padding: 0.5rem;
-  }
+
   form {
     padding: 1rem;
+    max-width: 100%;
+  }
+
+  .header-row img,
+  .header-side {
+    max-width: 120px;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-row {
+    gap: 0.4rem;
+    justify-content: center;
+    padding: 0 8px;
+    flex-wrap: wrap;
+  }
+
+  .header-row img,
+  .header-side {
+    max-width: 100px;
+    min-width: 36px;
+    height: auto;
+  }
+}
+
+@media (max-width: 408px) {
+  .header-row img,
+  .header-side {
+    max-width: 96px;
+    min-width: 40px;
+    height: auto;
   }
 }
