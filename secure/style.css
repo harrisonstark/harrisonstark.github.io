@@ -34,11 +34,11 @@ body {
 /* ---------------------- HEADER IMAGES (updated larger) ---------------------- */
 .header-row {
   display: flex;
-  gap: 1rem;
+  gap: 0.4rem;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 2rem;
+  align-items: flex-end;
+  margin-bottom: 0.7rem;
   padding: 0 12px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -47,18 +47,22 @@ body {
 .header-row img,
 .header-side {
   flex: 1 1 auto;
-  max-width: 160px;   /* bigger for desktop */
-  min-width: 48px;
-  height: auto;
+  max-width: clamp(120px, 18vw, 180px);
+  min-width: clamp(48px, 8vw, 120px);
+  height: clamp(60px, 12vw, 120px);
   object-fit: contain;
   opacity: 0.92;
+}
+
+.header-row img.middle-image {
+  margin-top: 64px !important;
+  padding-top: 32px !important;
 }
 
 /* ---------------------- TEXT ---------------------- */
 #guest-paragraph {
   text-align: center;
   font-size: 1.2em;
-  margin-top: 2em;
 }
 
 /* ---------------------- FORM ---------------------- */
@@ -208,8 +212,12 @@ button[type="submit"]:active {
 
   .header-row img,
   .header-side {
-    max-width: 120px;
-    min-width: 40px;
+    max-width: clamp(140px, 28vw, 220px);
+    min-width: clamp(80px, 16vw, 140px);
+    height: clamp(80px, 18vw, 160px);
+  }
+  .header-row img.middle-image {
+    margin-top: 40px;
   }
 }
 
@@ -223,17 +231,33 @@ button[type="submit"]:active {
 
   .header-row img,
   .header-side {
-    max-width: 100px;
-    min-width: 36px;
-    height: auto;
+    max-width: clamp(120px, 24vw, 180px);
+    min-width: clamp(60px, 12vw, 120px);
+    height: clamp(60px, 14vw, 120px);
+  }
+  .header-row img.middle-image {
+    margin-top: 24px;
   }
 }
 
 @media (max-width: 408px) {
   .header-row img,
   .header-side {
-    max-width: 96px;
-    min-width: 40px;
-    height: auto;
+    max-width: clamp(100px, 20vw, 140px);
+    min-width: clamp(60px, 12vw, 100px);
+    height: clamp(60px, 14vw, 100px);
   }
+  .header-row img.middle-image {
+    margin-top: 12px;
+  }
+}
+/* Keep all images on one row */
+.header-row {
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+}
+
+/* Target the middle image structurally */
+.header-row img:nth-child(2) {
+  margin-top: 40px !important;
 }
