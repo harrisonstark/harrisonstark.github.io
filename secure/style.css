@@ -47,7 +47,6 @@ body {
 .header-row img,
 .header-side {
   flex: 1 1 auto;
-  max-width: clamp(120px, 18vw, 180px);
   min-width: clamp(48px, 8vw, 120px);
   height: clamp(60px, 12vw, 120px);
   object-fit: contain;
@@ -73,7 +72,7 @@ form {
   padding: 2rem;
   margin-top: 2rem;
   width: 100%;
-  max-width: 600px; /* limit full width */
+  max-width: 460px; /* limit full width */
   box-sizing: border-box;
 }
 
@@ -199,7 +198,7 @@ button[type="submit"]:active {
 .hidden { display: none; }
 
 /* ---------------------- MEDIA QUERIES ---------------------- */
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .page {
     padding-left: 8px;
     padding-right: 8px;
@@ -207,12 +206,11 @@ button[type="submit"]:active {
 
   form {
     padding: 1rem;
-    max-width: 100%;
+    max-width: 460px;
   }
 
   .header-row img,
   .header-side {
-    max-width: clamp(140px, 28vw, 220px);
     min-width: clamp(80px, 16vw, 140px);
     height: clamp(80px, 18vw, 160px);
   }
@@ -227,23 +225,23 @@ button[type="submit"]:active {
     justify-content: center;
     padding: 0 8px;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .header-row img,
   .header-side {
-    max-width: clamp(120px, 24vw, 180px);
+    width: 100%;
     min-width: clamp(60px, 12vw, 120px);
-    height: clamp(60px, 14vw, 120px);
   }
   .header-row img.middle-image {
     margin-top: 24px;
+    width: 100%;
   }
 }
 
 @media (max-width: 408px) {
   .header-row img,
   .header-side {
-    max-width: clamp(100px, 20vw, 140px);
     min-width: clamp(60px, 12vw, 100px);
     height: clamp(60px, 14vw, 100px);
   }
