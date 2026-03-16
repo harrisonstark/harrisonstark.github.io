@@ -92,103 +92,46 @@
                 </div>
                 <div class="row experience-details">
                     <div class="col-lg-4 ml-auto">
-                        <p class="section-content">Qualtrics - <i>Machine Learning Engineer 2</i>
+                        <p class="section-content">Qualtrics - <i>Machine Learning Engineer II</i>
                             <span class="right-align-text">(May 2025 - Current)</span>
                         </p>
                         <ul>
-                            <li>More of the same, more responsibilities, TODO :)</li>
-                        </ul>
-                        <p class="section-content">Qualtrics - <i>Machine Learning Engineer 1/Software Engineer 1</i>
-                            <span class="right-align-text">(January 2024 - May 2025)</span>
-                        </p>
-                        <ul>
-                            <li>Accelerated Machine Learning Infrastructure:
-                                <ul>
-                                    <li>Managed and implemented features for a low-latency, high-traffic API gateway for company-wide machine learning inference supporting billions of monthly inferences.</li>
-                                    <li>Integrated with cutting-edge models, implementing cost-tracking mechanisms, and ensuring real-time metrics with effective visualizations.</li>
-                                </ul>
-                            </li>
-                            <li>Unified API Developments:
-                                <ul>
-                                    <li>Created a comprehensive embedding API from scratch.</li>
-                                    <li>Integrated with Azure OpenAI, AWS Bedrock, and self-hosted AWS SageMaker models.</li>
-                                    <li>Spearheaded the general availability readiness of our LLM API including robust reporting and comprehensive scale testing protocols and documentation.</li>
-                                </ul>
-                            </li>
-                            <li>Internal Tool Enhancements:
-                                <ul>
-                                    <li>Upgraded our internal LLM playground with significant new features such as chat history and CI/CD.</li>
-                                    <li>Guided an intern through project development, ensuring platform compliance with enterprise-grade standards for the internal LLM playground.</li>
-                                    <li>Led a team in the development of an internal LLM-powered Slack bot designed to triage and resolve tickets by suggesting relevant information from various sources, improving ticket resolution times and enhancing ticket experience.</li>
-                                </ul>
-                            </li>
-                            <li>Cost Tracking and Data Collection Systems:
-                                <ul>
-                                    <li>Designed and deployed dashboards for extensive cost tracking across models, utilizing advanced data analytics tools.</li>
-                                    <li>Automated critical data collection processes for Monthly Engineering Review (MER) to reduce manual overhead and enhance accuracy, efficiency, and visibility across brands and inferences.</li>
-                                    <li>Implemented a company-wide AWS policy enforcing billing code tagging across all roles to ensure precise cost tracking for SageMaker resources.</li>
-                                </ul>
-                            </li>
-                            <li>Operational Readiness and Documentation:
-                                <ul>
-                                    <li>Led the creation of extensive on-call runbooks, a standard documentation repository for our team, and standard operating procedures.</li>
-                                    <li>Improved operational readiness and ensured smooth knowledge transfer.</li>
-                                </ul>
-                            </li>
-                            <li>Cross-Team Collaboration and Support:
-                                <ul>
-                                    <li>Facilitated cross-functional meetings.</li>
-                                    <li>Presented design documents and led initiatives to streamline processes, optimize resource allocation, and address team-wide challenges.</li>
-                                </ul>
-                            </li>
+                            <li>Designed and own the company-wide <strong>ML gateway</strong> written in <strong>Go</strong>, serving as the single entry point for all model invocation at Qualtrics. Built for high-throughput concurrent request handling using goroutines, routing vendor-agnostic <strong>LLM</strong>, <strong>embedding</strong>, <strong>rerank</strong>, and self-hosted model traffic across <strong>Azure OpenAI</strong>, <strong>Bedrock</strong>, and <strong>SageMaker</strong>. Handles auth, rate limiting, cost tracking, regional failover, streaming, and caching, serving <strong>billions of inferences monthly</strong>.</li>
+                            <li>Authored and presented a company-wide <strong>AI enablement strategy</strong> to engineering leadership and executive staff projecting <strong>$30M+</strong> annual impact. Secured formal funding and scaled the program from hackathon experiments to an officially funded team, mentoring engineers in delivering the <strong>four most-used internal AI tools</strong> at the company.</li>
+                            <li>Built the <strong>Ops Agent</strong> as part of the internal AI tooling initiative, winning the company-wide hackathon (People's Choice). An <strong>MCP</strong>-powered incident triage agent that pulls context from <strong>Jira</strong>, <strong>Slack</strong>, <strong>GitLab</strong>, <strong>Splunk</strong>, and <strong>Google Drive</strong> to surface similar tickets, relevant code paths, <strong>Kubernetes</strong> commands, and Splunk queries, and autofills client response emails. Projects <strong>millions in annual savings</strong> and is one of the most used internal AI tools at the company.</li>
+                            <li>Built and standardized a <strong>unified embedding platform</strong> with company-wide adoption. Designed the abstraction layer, batching system, and cross-vendor fallback logic. Led integration of self-hosted <strong>BGE-M3</strong> (sync and async) to support large-scale semantic search.</li>
+                            <li>Authored the design standard for <strong>asynchronous ML inference</strong> at Qualtrics. Built an <strong>SQS + Lambda + Redis</strong> pipeline to handle <strong>terabyte-scale reindexing workloads</strong>, increasing throughput <strong>~10x</strong> on the same hardware cost while protecting shared <strong>Kubernetes</strong> services from saturation.</li>
+                            <li>Evaluated agent orchestration frameworks and deployed a self-hosted <strong>LangGraph platform</strong> as the company standard for agentic development. Replaced an exploratory POC monorepo with production infrastructure, established company-wide patterns for <strong>agent architecture</strong>, <strong>state management</strong>, and <strong>observability</strong> via <strong>Galileo</strong>, and shipped a retrieval and agent memory system now adopted by <strong>10+ product teams</strong>.</li>
+                            <li>Leading development of a <strong>Context Service</strong> that gives LLMs a centralized way to source and build context across the company. POC validated and now building the production version. Integrates document retrieval, structured agent memory (summaries, user profiles, behavioral signals), and knowledge bases. Requires deep cross-org integration across search, permissioning, roles, and filtering systems.</li>
                         </ul>
                         
-                        <p class="section-content">Qualtrics - <i>Software Engineer (Part-Time)</i>
-                            <span class="right-align-text">(October 2023 - December 2023)</span>
+                        <p class="section-content">Qualtrics - <i>Machine Learning Engineer I</i>
+                            <span class="right-align-text">(August 2024 - May 2025)</span>
                         </p>
                         <ul>
-                            <li>Production Readiness:
-                                <ul>
-                                    <li>Prepared the Quack-end Developer project for production, ensuring launch readiness and internal access for all employees.</li>
-                                </ul>
-                            </li>
-                            <li>Security and Maintenance:
-                                <ul>
-                                    <li>Migrated high volume automations from Python 2 to Python 3, enhancing security posture.</li>
-                                    <li>Developed comprehensive unit and integration tests and thorough documentation for ease of future development.</li>
-                                </ul>
-                            </li>
+                            <li>Supported development and maintenance of the company-wide ML gateway, implementing features for low-latency, high-traffic API serving billions of monthly inferences.</li>
+                            <li>Contributed to unified embedding platform development, integrating with Azure OpenAI, AWS Bedrock, and self-hosted SageMaker models.</li>
+                            <li>Assisted in deployment of LangGraph platform and established patterns for agentic AI development across teams.</li>
+                        </ul>
+                        
+                        <p class="section-content">Qualtrics - <i>Software Engineer I</i>
+                            <span class="right-align-text">(January 2024 - August 2024)</span>
+                        </p>
+                        <ul>
+                            <li>Accelerated Machine Learning Infrastructure development for company-wide inference gateway supporting billions of monthly inferences.</li>
+                            <li>Led creation of comprehensive embedding API, integrating multiple model vendors and implementing cost tracking mechanisms.</li>
+                            <li>Developed internal LLM-powered Slack bot for ticket triage and resolution support across the company.</li>
+                            <li>Designed and deployed cost tracking dashboards and automated data collection systems for Monthly Engineering Review.</li>
+                            <li>Led creation of on-call runbooks and standard operating procedures for team knowledge transfer.</li>
                         </ul>
                         
                         <p class="section-content">Qualtrics - <i>Software Engineer Intern</i>
                             <span class="right-align-text">(June 2023 - August 2023)</span>
                         </p>
                         <ul>
-                            <li>LTI 1.3 Integration:
-                                <ul>
-                                    <li>Designed and developed the Gradebook Passback feature for the Qualtrics LTI 1.3 integration using Node.js, facilitating seamless grade data synchronization from Qualtrics surveys.</li>
-                                </ul>
-                            </li>
-                            <li>Permissions Feature Development:
-                                <ul>
-                                    <li>Proposed and integrated a permissions feature, significantly expanding the potential customer base.</li>
-                                </ul>
-                            </li>
-                            <li>Launch Readiness Preparation:
-                                <ul>
-                                    <li>Executed thorough testing, review, and completion of the launch readiness checklist.</li>
-                                    <li>Enabled a successful early access launch.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <p class="section-content">Undergraduate Research - <i>Independent Researcher</i> - (<a href="https://github.com/harrisonstark/undergraduate-research" class="project-link" target="_blank" rel="noreferrer noopener">Link to Repository</a>)
-                            <span class="right-align-text">(January 2023 - May 2023)</span>
-                        </p>
-                        <ul>
-                            <li>Authored a research paper exploring the use of YOLOv8, a state-of-the-art object detection algorithm, to improve real-time traffic signal operations at a complex intersection in Gainesville, Florida.</li>
-                            <li>Suggested an implementation plan involving cameras connected to a central processing unit to monitor traffic and pedestrian activity.</li>
-                            <li>Proposed signal timing adjustments to improve safety and efficiency up to 10%.</li>
+                            <li>Designed and developed the Gradebook Passback feature for Qualtrics LTI 1.3 integration using Node.js, facilitating seamless grade synchronization.</li>
+                            <li>Proposed and integrated permissions feature, significantly expanding potential customer base.</li>
+                            <li>Executed thorough testing and launch readiness preparation for early access release.</li>
                         </ul>
                     </div>
                 </div>
