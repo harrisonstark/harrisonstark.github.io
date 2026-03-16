@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const meta = posts.find(p => p.slug === slug);
     if (meta) {
       title.textContent = meta.title;
+      document.title = `${meta.title} | Harrison Stark`;
     } else {
       title.textContent = "Untitled Post";
     }
