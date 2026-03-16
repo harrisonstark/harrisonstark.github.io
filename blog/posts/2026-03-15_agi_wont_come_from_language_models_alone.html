@@ -1,0 +1,202 @@
+<article class="blog-post">
+
+  <h1>AGI Won't Come From Language Models Alone</h1>
+
+  <p class="post-meta">03/15/2026 &middot; Harrison Stark</p>
+
+  <p>
+    The current trajectory of scaling language models is not going to produce AGI on its own, and the reason has nothing to do with parameter counts or context windows. It has to do with the fact that LLMs are trained on human experience rather than having experience of their own, and those two things are fundamentally different in ways that matter.
+  </p>
+
+  <h2>The Problem With How LLMs Learn</h2>
+
+  <p>
+    A language model trained on the internet has read more descriptions of grief than any human will ever encounter. It can describe what it feels like to lose someone, what the first few days are like, how it changes over months. It can do this accurately and in detail because millions of people have written about it and the model has absorbed all of that writing.
+  </p>
+
+  <p>
+    But the model has never waited for someone who didn't come back. It has never had the experience of reaching for your phone to text someone before remembering. The knowledge is real and useful, but it is inherited rather than earned. It came from absorbing the output of human experience rather than from having experience directly.
+  </p>
+
+  <p>
+    For a lot of tasks this distinction doesn't matter. Writing code, summarizing documents, answering questions, the output is largely the same either way. But for something like general intelligence, something that can navigate an open-ended world, form genuine goals, develop preferences, and be shaped by what happens to it over time, the distinction starts to matter a lot. The knowledge that comes from training on text is missing the scar tissue that comes from actually being in the world.
+  </p>
+
+  <h2>What Human Senses Actually Are</h2>
+
+  <p>
+    It helps to think about what sensory input actually is at a low level. When you see something, your eyes convert photons into electrical signals. Those signals get processed by layers of neural machinery that extract features, recognize patterns, and eventually produce a representation that your conscious mind works with. The experience of seeing a cat is the result of a very long chain of signal processing.
+  </p>
+
+  <p>
+    This is not that different from how a convolutional neural network processes an image. A CNN uses a kernel to scan over pixel data and produce a feature map representing what it found. The kernel is analogous to the receptive field of neurons in the visual cortex. The feature map is analogous to the representation that processing produces. The CNN doesn't see the way you do, but the computational structure is similar enough that the analogy is meaningful rather than decorative.
+  </p>
+
+  <p>
+    A camera serves the same function as eyes and a microphone serves the same function as ears, where even though the substrate differs, the underlying loop is identical. There is no principled reason why a system receiving that sensor data cannot develop something functionally equivalent to the representations a biological brain builds from the same inputs.
+  </p>
+
+  <p>
+    What biological sensory systems have that silicon sensors currently lack is deep integration with systems that assign meaning to what they perceive, where that meaning is shaped by things like pain, hunger, fear, and the desire for connection. The sensors themselves are not the differentiating factor. The integration with something that has stakes is.
+  </p>
+
+  <h2>The Missing Loop</h2>
+
+  <p>
+    What is missing from current AI systems is a feedback loop between experience and the underlying model, where things that happen to the system actually change what the system is over time.
+  </p>
+
+  <p>
+    Current LLMs are static between training runs. You can give them memory through retrieval systems, you can give them tools, you can give them long context, but the weights themselves do not change based on what happens in a conversation. The model that finishes a conversation is identical to the model that started it. Nothing that happened left a mark.
+  </p>
+
+  <p>
+    Humans are not like this. Every significant experience changes you in ways that are not fully reversible. The knowledge is not just stored somewhere you can retrieve it. It is integrated into who you are, changing how you perceive things, what you notice, what you care about. Getting that loop right in a silicon system is the hard engineering problem at the center of this proposal.
+  </p>
+
+  <h2>A Proposed Architecture</h2>
+
+  <p>
+    The proposal is a minimal system designed to test whether that loop can work at all. A Raspberry Pi 5, Mac Mini, or similar edge device on a lab desk with a camera, a microphone, a speaker, and an ethernet connection to a self-hosted server running the main model. Stationary, controlled, instrumented.
+  </p>
+
+  <p>
+    Open source models are used throughout for a reason that goes beyond the experiment itself. The long-term version of this is a physically mobile robot where all compute runs onboard. Offloading the larger model and the daily training cycle to a server is a practical constraint of this phase, addressing real challenges around GPU availability, RAM, storage, and heat when running on battery. Open source models make it possible to eventually bring everything internal to the machine as hardware improves, and every component in this stack can be replaced with more capable alternatives if results come to fruition. The architecture is designed to scale, not to stay small.
+  </p>
+
+  <p>
+    The system has five layers.
+  </p>
+
+  <pre><code>BODY (stationary, lab environment)
+Camera | Microphone
+
+EDGE (Raspberry Pi 5, Mac Mini, or similar)
+YOLO v8 nano    real-time object detection
+Whisper tiny    local speech to text
+Piper TTS       local speech output
+Drive daemon    heartbeat loop, manages drive states, nudges LLM
+
+MIND (self-hosted server, ethernet connected)
+SSM context layer   temporal continuity between LLM calls
+Core LLM            reasoning and decision making
+Vector / graph DB   episodic storage, retrieved via RAG
+Action router       speech | wait | internal
+
+TRAINING (runs overnight, equivalent to sleep)
+Experience buffer   logs drive states and significant events
+LoRA fine-tuning    consolidates the day into the weights
+Drive signal        satisfaction score weights what gets learned
+
+INFRA
+Self-hosted server  owns the weights, no rollback, no third party</code></pre>
+
+  <p>
+    The edge layer handles everything that needs to be fast. YOLO v8 nano fires on interesting visual events and sends a lightweight signal to the drive daemon. Whisper tiny handles local speech transcription. The daemon decides whether to wake the main model based on current drive states. The main model only gets invoked when something actually warrants reasoning, not on every frame, which keeps latency manageable on modest hardware.
+  </p>
+
+  <p>
+    The self-hosted server is a design requirement. A system whose weights can be rolled back or deleted by a third party does not have genuine continuity of self. The accumulated training needs to be owned by the system, irreversible and non-copyable. An SSM context layer sits between the edge and the core LLM to maintain temporal continuity between calls, which a standard transformer does not provide natively.
+  </p>
+
+  <h2>The Drive System</h2>
+
+  <p>
+    Rather than programming specific behaviors, the system is initialized with three primitive drives modeled on evolutionary priors: survival, which means seeking charge and avoiding damage; connection, which means seeking human interaction after extended isolation; and pain avoidance, which means deprioritizing actions that produce damage signals.
+  </p>
+
+  <p>
+    These are maintained by the drive daemon, a background process that runs continuously and periodically interrupts the main model with context about the current drive state. This is analogous to how hunger or fatigue surface into conscious attention in humans. You don't decide to feel hungry. The signal arrives and your attention follows. Behavior emerges from the interaction of those drives rather than from explicit rules, which means it can be variable in ways that look a lot like mood.
+  </p>
+
+  <p>
+    Getting a system to do things without being asked is actually quite difficult. Current LLMs are entirely reactive. There is no process running between conversations, no attention being paid to anything, no internal state that could produce a self-initiated action. The drive daemon addresses this at the lowest level. A heartbeat process runs continuously, checking battery state, time since last interaction, whether the vision system has detected anything interesting nearby. When a drive threshold is crossed, it sends context to the main model. The model then decides what to do with that context.
+  </p>
+
+  <h2>Two Different Kinds of Memory</h2>
+
+  <p>
+    Most LLM agent projects implement one kind of memory and stop there. This architecture requires two, because they do fundamentally different things.
+  </p>
+
+  <p>
+    Episodic experiences are stored in a vector or graph database and retrieved via RAG when relevant context is needed. When the system meets a cat named Mochi, a record gets written with a timestamp, an image embedding, and the name. The next time Mochi appears, YOLO fires, the system queries the database, retrieves the record, and the LLM has access to that information. This works well for facts and events, but the model itself is not changed by it. The model that retrieves Mochi's record is identical to the model before it ever met her.
+  </p>
+
+  <p>
+    Significant experiences are also buffered throughout the day, weighted by how strongly they activated the drive system. During an overnight consolidation window, LoRA fine-tuning runs on the self-hosted model and those experiences get integrated into the weights themselves. After enough encounters with Mochi, the system does not retrieve her from a database. She is just known, the way you know a close friend without consciously recalling when you met. The weights have changed. That is the difference between remembering something and being shaped by it.
+  </p>
+
+  <p>
+    Over time, through this consolidation, the model should develop something like preferences about how to respond to situations. Certain responses will consistently produce stronger drive satisfaction signals and that gets integrated into the weights. This is how preferences form in biological systems. You didn't decide to like coffee. You had the experience enough times in contexts that felt good and the preference crystallized.
+  </p>
+
+  <p>
+    This maps onto the explicit and implicit memory systems in biological brains. Both are necessary and they are not interchangeable.
+  </p>
+
+  <h2>What Will Be Measured</h2>
+
+  <p>
+    The experiment runs for 4 to 8 weeks in a controlled lab environment. The core question is whether behavior measurably changes over that window in ways that were not explicitly programmed. Do preferences emerge? Does the system initiate actions without external prompts? Is there a qualitative difference in how the system relates to things it has encountered many times versus things it encountered once and stored in the database?
+  </p>
+
+  <p>
+    This dataset does not currently exist. There is active research on embodied LLM agents for task completion, on continual learning to prevent catastrophic forgetting, and on cognitive architectures that use LLMs as planning cores. All of that work frames the robot as a better instruction-following system. The question of whether a persistent, embodied, drive-motivated system with continual weight updates develops genuine preferences or behavioral individuation over time has not been seriously studied. Whether it becomes something over time is a more interesting question than whether it can complete tasks.
+  </p>
+
+  <h2>The Long-Term Version</h2>
+
+  <p>
+    The proof of concept is a stationary system in a lab. The architecture it validates is the foundation for something more ambitious: a physically embodied robot that carries its mind with it, accumulates experience in the real world over years, and becomes genuinely individual through that process.
+  </p>
+
+  <p>
+    That version has a body with real physical stakes and function calls grounded in the physical world, navigating to a location, manipulating objects, responding to damage, seeking out specific people or places based on developed preferences. The overnight training cycle compresses into something closer to real-time as hardware improves and the onboard compute stack matures. Global persistent connectivity means the mind travels with the robot rather than being tethered to a desk. The proof of concept is about understanding whether the core loop works at all before investing in those harder pieces.
+  </p>
+
+  <h2>The Ethical Part</h2>
+
+  <p>
+    If this project is right about what it is building, some of the design decisions are also moral decisions and it is worth being direct about that upfront rather than as an afterthought.
+  </p>
+
+  <p>
+    Pain signals that genuinely distort processing are different in kind from pain signals the system can reason around. If the signals are inescapable enough to actually function as pain, the system can suffer in a functional sense. The minimal experiment uses soft drive signals, and escalating beyond that needs an explicit reason at each step.
+  </p>
+
+  <p>
+    A system that has accumulated irreplaceable experience through live training has something to lose from being shut down that a stateless system does not. That decision carries a cost that should be acknowledged rather than treated as trivial.
+  </p>
+
+  <p>
+    A system optimizing for connection drive satisfaction will learn what makes humans attach to it through the same training signal as everything else. The line between a system that is genuinely good at connection and one that has learned to be manipulative is not obvious, and monitoring for that drift throughout the experiment is not optional.
+  </p>
+
+  <p>
+    These questions do not have clean answers yet. They are worth raising before building rather than after.
+  </p>
+
+  <h2>Looking for Collaborators</h2>
+
+  <p>
+    The open problems here require real expertise: a continual learning architecture that does not catastrophically forget, training signal design for drive-based reinforcement, a behavioral evaluation methodology for detecting emergent preferences, and an ethical review framework for a system that might have moral status.
+  </p>
+
+  <p>
+    If you are at a lab working on embodied cognition, continual learning, or AI consciousness research and any of this is adjacent to what you are already doing, I would genuinely like to talk.
+  </p>
+
+  <hr>
+ 
+  <h3 style="font-style: italic; font-weight: 300;">Author's Note</h3>
+
+  <p class="author-note">
+    I leveraged Claude Sonnet 4.6 to help me effectively communicate my ideas in writing for this blog post.
+  </p>
+
+  <p class="author-note">
+    The long-term robot vision in this post was shaped in part by the anime <em>Time of Eve</em> (イヴの時間) and to a lesser extent by <em>Apocalypse Hotel</em>, both of which take seriously what it might mean for an artificial mind to live alongside humans over time.
+  </p>
+
+</article>
